@@ -1,0 +1,318 @@
+/*<!-- Group 1
+Eric Nunez
+Mustafa Khan
+Abdulla Abu Isha -->*/
+
+
+body{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: helvetica, sans-serif;
+}
+#page-Container{
+	display: grid;
+	margin-left: auto;
+	margin-right: auto;
+	grid-row-gap: .5em;
+	margin: 15px 15px;
+}
+header{
+	background-image: url("../images/dryingLine.jpg");
+	background-position: center;
+	background-size: cover;
+	max-width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+#header-title{
+	padding: 0px 5px;
+}
+#header-title > h1{
+	margin: 0px;
+	font-size: 4.5vw;
+	color: white;
+	letter-spacing: 1px;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+#header-description > p{
+	padding: 5px 5px;
+	margin: 5px;
+	color: white;
+	font-size: 2vw;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+.headlogo{
+	padding: 20px;
+	float: right;
+	max-width: 20%;
+    height: auto;
+}
+#header-title{
+	text-align: center;
+}
+#header-description{
+	text-align: center;
+}
+#secondRow{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 1em;
+}
+#secondRow-first, #secondRow-second, #secondRow-third{
+	padding: 1em 1em;
+}
+.icon{
+	text-align: center;
+}
+.dtls{
+	text-align: center;
+}
+#secondPicture{
+	background-image: url("../images/shinyLids.jpg");
+	background-size: cover;
+	background-position: center;
+	max-width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+#secondPicture-transparent{
+
+	background: rgba(58,162,175, 0.5);
+	margin-right: 30px;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+#secondPicture-transparent-head > h3{
+	font-size: 2em;
+	letter-spacing: 1px;
+}
+#secondPicture-transparent-desc{
+	font-size: 18px;
+}
+#secondPicture-transparent-desc > p{
+	margin-top: 0;
+	letter-spacing: 1px;
+}
+#secondPicture-transparent-boxes{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 15px 40px;
+	grid-gap: 3em;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 20px;
+}
+#secondPicture-transparent-left{
+	border: 1px solid white;
+	padding: 5px;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+#secondPicture-transparent-right{
+	border: 1px solid white;
+	padding: 5px;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+.service{
+	padding-top: 15px;
+}
+.price{
+	padding: 10px;
+}
+#description{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: .5em;
+}
+#description-left{
+	/*box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);*/
+}
+#description-left-p > p{
+	font-style: italic;
+}
+
+#description-right{
+	align-self: center;
+}
+.descriptionImage{
+	max-width: 100%;
+    height: auto;
+}
+footer{
+	background-color: #233239;
+	display: grid;
+	color: white;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	border-radius: 5px;
+}
+#footer-top{
+	padding: 10px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: linear-gradient( rgba(33, 37, 43, 0.6), rgba(33, 37, 43, 0.1) ), url("../images/laundromatBW.jpg");
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	letter-spacing: 1px;
+	border-radius: 5px 5px 0px 0px;
+}
+#footer-title > h3{
+	margin: 5px 0px;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+#footer-bottom{
+	display: block;
+	padding: 10px;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	letter-spacing: .3px;
+}
+#footer-bottom-copy{
+	float: left;
+	line-height: 2.0;
+}
+#footer-bottom-social{
+	float: right;
+}
+input[type=text]{
+	border: none;
+	padding: 8px 8px;
+	/*width: 80%;*/
+	font-size: 12px;
+	border-radius: 3px;
+}
+input[type=submit]{
+	background-color: #4CAF50;
+	color: white;
+	padding: 9px;
+	margin: 10px 0;
+	font-size: 12px;
+	border: none;
+	border-radius: 3px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/*-----------Hamburger Button Styling----------*/
+#hamburgerButton {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+    padding: 8px;
+    background-color: rgba(33, 37, 43, 0.7);
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 2.0);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+@media (max-width: 715px){
+	#secondPicture-transparent{
+		width: 80%;
+		padding: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (min-width: 716px){
+	#secondPicture-transparent{
+		float: right;
+		padding: 30px;
+		width: 45%;
+		height: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

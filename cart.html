@@ -1,0 +1,361 @@
+<!-- Group 1
+Eric Nunez
+Mustafa Khan
+Abdulla Abu Isha -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Golden Eagle Laundry - Shopping Cart</title>
+	<link rel="stylesheet" href="css/cartStyles.css">
+	<meta name="keywords" content="neiu, laundry, golden, eagle, student, fast, dry, cleaning, wash">
+	<meta name="description" content="Golden Eagle Laundry - Fast Easy and Convenient">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+<!-- 	This Page was designed and created by Eric Nunez 2018-->
+</head>
+<body>
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="index.html">Home</a>
+	  <a href="about.html">About us</a>
+	  <a href="pricelist.html">Price List</a>
+	  <a href="cart.html">Shopping Cart</a>
+	  <a href="ordertracker.html">Order Tracker</a>
+	</div>
+	<div id="main"> <!-- This is the main div to push content right -->
+	<div id="page-Container">
+		<header>
+			<div id="header-logo-nav">
+				<div id="header-logo">
+					<img class="headlogo" alt="Logo of company is a Gold eagle" src="images/eagleLogo.png">
+				</div>
+				<div onclick="openNav()">
+					<div id="hamburgerButton">
+						<div class="bar1"></div>
+				 		<div class="bar2"></div>
+				 		<div class="bar3"></div>
+					</div>
+				</div>
+			</div>
+			<div id="header-title">
+				<h1>Golden Eagle Laundry</h1>
+			</div>
+			<div id="header-description">
+				<p>Welcome to a new simple fast solution for your everyday laundry needs.</p>
+			</div>
+		</header>
+		<div id="mainCart">
+			<div id="mainCart-Left">
+				<div id="mainCart-Left-Head">
+					<h2>Your Shopping Cart</h2>
+				</div>
+				<div id="mainCart-Left-Subtitle">
+					<h4>Free folding with every order!</h4>
+				</div>
+				<div id="row">
+					<div class="itemTop">
+						<div class="itemNameTop">Product</div>
+						<div class="itemDescriptionTop">Item Details</div>
+						<div class="itemQuantityTop">Weight/lbs</div>
+						<div class="itemPriceTop">Price/lbs</div>
+						<div class="itemRemoveTop"> Edit</div>
+					</div>
+					<div class="item">
+						<div class="itemName">
+							<img alt="polo shirt" class ="svgIcon" src="images/polo.png" >
+						</div>
+						<div class="itemDescription">Polo shirt</div>
+						<div class="itemQuantity"> 3</div>
+						<div class="itemPrice">3.99</div>
+						<div class="itemRemove"><i class="fas fa-times fa-lg"></i> Remove</div>
+					</div>
+					<div class="item">
+						<div class="itemName"><img alt="dress" class="svgIcon" src="images/dress.png"></div>
+						<div class="itemDescription">Dress</div>
+						<div class="itemQuantity">3</div>
+						<div class="itemPrice">8.99</div>
+						<div class="itemRemove"><i class="fas fa-times fa-lg"></i> Remove</div>
+					</div>
+					<div class="item">
+						<div class="itemName"><img alt="jeans" class="svgIcon" src="images/jeans.png"></div>
+						<div class="itemDescription">Jeans</div>
+						<div class="itemQuantity">1</div>
+						<div class="itemPrice">9.99</div>
+						<div class="itemRemove"><i class="fas fa-times fa-lg"></i> Remove</div>
+					</div>
+					<div class="item">
+						<div class="itemName"><img alt="coat" class="svgIcon" src="images/coat.png"></div>
+						<div class="itemDescription">Winter coat</div>
+						<div class="itemQuantity">2</div>
+						<div class="itemPrice">9.99</div>
+						<div class="itemRemove"><i class="fas fa-times fa-lg"></i> Remove</div>
+					</div>
+					<div class="item">
+						<div class="itemName"><img alt="shirt" class="svgIcon" src="images/shirt.png"></div>
+						<div class="itemDescription">Dry clean shirt</div>
+						<div class="itemQuantity">2</div>
+						<div class="itemPrice">9.99</div>
+						<div class="itemRemove"><i class="fas fa-times fa-lg"></i> Remove</div>
+					</div>
+					<div class="item">
+						<div class="itemName"><img alt="green shirt" class="svgIcon" src="images/skirt.png"></div>
+						<div class="itemDescription">Ladies Skirt</div>
+						<div class="itemQuantity">2</div>
+						<div class="itemPrice">9.99</div>
+						<div class="itemRemove"><i class="fas fa-times fa-lg"></i> Remove</div>
+					</div>
+				</div>
+				<div id="paymentWrapper"> 
+					<h2>Your Payment</h2>
+					<h3>Billing Information</h3>
+					<form id="payForm"><!--  Begin form fields -->
+						<div id="paymentTop">
+							<div class="row">
+								<div class="rowLeft">
+									<label for="firstname">First Name</label>
+								</div>
+								<div class="rowRight">
+									<input type="text" id="firstname" name="firstname" class="paymentInput" placeholder="John" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="lastname">Last Name</label>
+								</div>
+								<div class="rowRight">
+									<input type="text" placeholder="Smith" id="lastname" name="lastname" class="paymentInput" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="email">Email</label>
+								</div>
+								<div class="rowRight">
+									<input type="email" placeholder="name@mail.com" id="email" name="email" class="paymentInput" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="address">Address</label>
+								</div>
+								<div class="rowRight"><input type="text" placeholder="456 North Ave" name="address" id="address" class="paymentInput" required></div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="city">City</label>
+								</div>
+								<div class="rowRight"><input type="text" id="city" placeholder="Springfield" name="city" class="paymentInput" required></div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="State">State</label>
+								</div>
+								<div class="rowRight">
+									<input type="text" id="State" placeholder="Missouri" name="State" class="paymentInput" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="zip">Zip Code</label>
+								</div>
+								<div class="rowRight"><input type="text" placeholder="55555" id="zip" name="zip" class="paymentInput" pattern="[+]?[0-9]{5,9}" required></div>
+							</div>
+						</div> <!-- End of payment Top -->
+						<h3>Accepted Cards</h3>
+						<img alt="accepted credit cards logos" src="images/creditCard.png">
+						<div id="paymentBottom"><!--  Beginning of Payment Bottom -->
+							<div class="row">
+								<div class="rowLeft">
+									<label for="nameoncard">Name on Card</label>
+								</div>
+								<div class="rowRight"><input type="text" placeholder="John Smith" id="nameoncard" name="nameoncard" class="paymentInput" required></div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="cardnumber">Card Number</label>
+								</div>
+								<div class="rowRight"><input type="text" placeholder="4213 5632 4410 6968" id="cardnumber" name="cardnumber" class="paymentInput" required></div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="expmonth">Exp Month</label>
+								</div>
+								<div class="rowRight"><input type="text" placeholder="mm" id="expmonth" name="expmonth" class="paymentInput" required></div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="expyear">Exp Year</label>
+								</div>
+								<div class="rowRight"><input type="text" placeholder="yy" id="expyear" name="expyear" class="paymentInput" required></div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+									<label for="cvv">CVV</label>
+								</div>
+								<div class="rowRight"><input type="text" id="cvv" placeholder="000" name="cvv" class="paymentInput" required></div>
+							</div>
+							<div class="row">
+								<div class="rowLeft">
+								</div>
+								<div class="rowRight" id="payNow">
+									Submit
+								</div>
+							</div>
+						</div> <!-- End of Payment Bottom -->
+					</form>
+				</div><!--  End of Payment Wrapper -->
+				<div id="modal">
+					<div id="modalTitle">
+						<h2>Order Confirmed</h2>
+							<div id="closeModal" class="modalBtn">&times;
+							</div>
+					</div>
+					<div id="modalContent">
+						<i class="far fa-check-circle" id="checkIcon"></i>
+						<h3>Thank you!</h3>
+						<h4>We have received your order and will get started on it right away. You will receive an email confirmation shortly.</h4>
+					</div>
+					<!-- <div id="modalButtons" class="row">
+						<button class="btn-primary modalBtn">Accept</button>
+						<button class="btn-default modalBtn">Decline</button>
+					</div> -->
+				</div>
+				<div id="disabledBody"></div>
+			</div>
+			<div id="mainCart-Right-Parent">
+				<div id="mainCart-Right">
+					<div id="mainCart-Right-Title">
+						<h3>Order Summary</h3>
+					</div>
+					<div id="mainCart-Right-Promo">
+						<h4 id="promoTog" class="infoLeft">Do you have a promo code? <i class="fas fa-arrow-alt-circle-down" id="promoDown"></i></h4>
+					</div>
+					<div id="promoForm">
+							<form>
+								<input id="promoCode" type="text" name="promo">
+								<input id="promoButton" type="submit" name="Apply">
+							</form>
+						</div>
+					<div id="mainCart-Right-Subtotal">
+						<h4 class="infoLeft">Subtotal</h4>
+						<h4 class="Price">$29.99</h4>
+					</div>
+					<div id="mainCart-Right-Taxes">
+						<h4 class="infoLeft">Estimated Taxes</h4>
+						<h4 class="Price">$7.99</h4>
+					</div>
+					<div id="mainCart-Right-Total">
+						<h4 class="infoLeft">TOTAL</h4>
+						<h4 class="Price">$36.98</h4>
+					</div>
+					<div id="mainCart-Right-Checkout">
+						Checkout
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<div id="footer-top">
+				<div id="footer-title">
+					<h3>Join our Newsletter</h3>
+					<form>
+						<label for="emailFoot"><i class="fa fa-envelope"></i> Email: </label>
+						<input type="text" id="emailFoot" name="email" placeholder="Your email here" required>
+						<!-- <br> -->
+						<input class="btn" type="submit" value="Subscribe">
+					</form>
+				</div>
+				<div id="footer-description">
+					
+				</div>
+				<div id="footer-form">
+				</div>
+			</div>
+			<div id="footer-bottom">
+				<div id="footer-bottom-copy">
+					&copy; 2018 Golden Eagle Laundry. Designed &amp; Developed by Client Side Group 1.
+				</div>
+				<div id="footer-bottom-social">
+					<a href=""><img alt="twitter logo link" class="socialImage" src="images/twitter.png"></a>
+					<a href=""><img alt="facebook logo link" class="socialImage" src="images/facebook.png"></a>
+					<a href=""><img alt="google plus logo link" class="socialImage" src="images/gplus.png"></a>
+				</div>
+			</div>
+		</footer>
+	</div> <!-- end of pageContainer -->
+	</div> <!-- End of main div -->
+	<script>
+		$(document).ready(function(){
+    		$("#mainCart-Right-Promo").click(function(){
+        		$("#promoForm").slideToggle("slow");
+    		});
+
+    		$(".itemRemove").click(function(){
+        		// $(".item").fadeOut()
+        		$(this).parent().slideUp(400)
+    		});
+
+    		$("#mainCart-Right-Checkout").click(function() {
+    			$("#row").slideUp("slow",function(){
+    				$("#paymentWrapper").show(500);
+    			});
+    		});
+
+    		$('#payNow').click(function(){
+				$('#disabledBody').show();
+				$('#modal').show();
+			});
+
+			$('.modalBtn').click(function(){
+				$('#disabledBody').hide();
+				$('#modal').hide();
+			});
+
+    	});
+
+		function openNav() {
+    		document.getElementById("mySidenav").style.width = "250px";
+    		document.getElementById("main").style.marginLeft = "250px";
+    		
+		}
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		    document.getElementById("main").style.marginLeft = "0"; 
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

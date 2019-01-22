@@ -1,0 +1,581 @@
+/*<!-- Group 1
+Eric Nunez
+Mustafa Khan
+Abdulla Abu Isha -->
+*/
+
+body{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: helvetica, sans-serif;
+}
+#page-Container{
+	display: grid;
+	margin-left: auto;
+	margin-right: auto;
+	grid-row-gap: .5em;
+	margin: 15px 15px;
+}
+header{
+	background-image: url("../images/dryingLine.jpg");
+	background-position: center;
+	background-size: cover;
+	max-width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+#header-title{
+	padding: 0px 5px;
+}
+#header-title > h1{
+	margin: 0px;
+	font-size: 4.5vw;
+	color: white;
+	letter-spacing: 1px;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+#header-description > p{
+	padding: 5px 5px;
+	margin: 5px;
+	color: white;
+	font-size: 2vw;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+.headlogo{
+	padding: 20px;
+	float: right;
+	max-width: 20%;
+    height: auto;
+}
+#header-title{
+	text-align: center;
+}
+#header-description{
+	text-align: center;
+}
+/*End of Header*/
+
+/*Beginning of main cart div styles*/
+#mainCart{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap:1em;
+	min-height: 950px;
+}
+/*#mainCart h2, h4{
+	margin: 0px;
+	padding: 10px;
+}*/
+
+/*------------------Beginning of the left cart of the page------------------------*/
+#mainCart-Left{
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+
+}
+#mainCart-Left-Head{
+	background-color: #233239;
+	border-radius: 3px;
+	color: white;
+	margin-bottom: 1em;
+	padding-left: 1em;
+	letter-spacing: .5px;
+
+}
+#mainCart-Left-Body{
+	width: 100%;
+	background-color: #f22b5b;
+	clear: both;
+	border-radius: 3px;
+	color: white;
+
+}
+#mainCart-Left-Subtitle{
+	padding-left: 1em;
+	background-color: #3cc3c4;
+	border-radius: 3px;
+	color: white;
+	letter-spacing: .5px;
+}
+#mainCart-Left-Subtitle > h4{
+	margin-top: .5em;
+	margin-bottom: .5em;
+	letter-spacing: .5px;
+}
+#row{
+	margin-top: 1em;
+	border-radius: 3px;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+.item{
+	display: flex;
+	/*margin: .5em;*/
+	background-color: #ffffff;
+	justify-content: space-evenly;
+	/*text-shadow: 2px 2px 1px #333;*/
+	color: black;
+	padding: 10px;
+	letter-spacing: 1px;
+	border-bottom: 1px solid black;
+	align-items: center;
+}
+.itemTop{
+	display: flex;
+	background-color: #ffffff;
+	justify-content: space-evenly;
+	color: black;
+	border-bottom: 1px solid black;
+	padding: 10px;
+}
+.itemTop > div{
+	flex: 1 1 20%;
+	padding: 5px 10px;
+	letter-spacing: 1px;
+	text-align: left;
+}
+.itemNameTop{
+
+}
+.itemDescriptionTop{
+
+}
+.itemQuantityTop{
+	text-align: left;
+}
+.itemPriceTop{
+	text-align: left;
+}
+.itemRemoveTop{
+	/*vertical-align: center;
+	text-align: center;*/
+/*	margin-left: 30px;
+	margin-right: 30px;*/
+	padding: 0px;
+}
+.item > div{
+	flex: 1 1 25%;
+	padding: 5px 10px;
+	letter-spacing: 1px;
+}
+.itemName{
+}
+.itemDescription{
+/*	margin: 30px;
+*/
+}
+.itemQuantity{
+	text-align: left;
+/*	margin: 30px;
+*/}
+.itemPrice{
+/*	margin: 30px;
+*/}
+.itemRemove{
+	cursor: pointer;
+	border-radius: 3px;
+	background: linear-gradient(#233239, #30454f);
+	text-align: center;
+	vertical-align: center;
+	line-height: 2.0;
+	color: white;
+	letter-spacing: 0px;
+	/*margin: 30px;*/
+}
+.itemRemove:hover{
+	background: linear-gradient(#30454f, #233239);
+}
+/*End of cart box on the left*/
+
+/*Beginning of payment styles on the left*/
+#paymentWrapper{
+	background-color: white;
+	display: grid;
+	grid-gap: 2em;
+	display: none;
+}
+#paymentTop{
+/*			background-color: lightgrey;
+*/			border-radius: 5px;
+	display: grid;
+	grid-auto-flow: row;
+	grid-gap: 1em;
+}
+#paymentBottom{
+	border-radius: 5px;
+	display: grid;
+	grid-auto-flow: row;
+	grid-gap: 1em;
+}
+.row{
+	display: flex;
+}
+.rowLeft{
+	padding: 10px;
+	background-color: white;
+	flex: 1 1 25%;
+	color: black;			
+}
+.rowRight{
+	flex-grow: 5;
+	background-color: #f2f4f5;
+	flex: 1 1 75%;
+	padding: 5px;
+	color: black;
+	border-radius: 5px;
+}
+.paymentInput {
+	width: 80%;
+	padding: 5px;
+	border: none;
+	background-color: #f2f4f5;
+}
+
+
+/*Subtotal box on the right*/
+#mainCart-Right{
+	display: flex;
+	flex-direction: column;
+	background-color: #233239;
+	color: white;
+	border-radius: 3px;
+	padding: 15px;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+#mainCart-Right-Title > h3{
+	margin-left: 1em;
+	margin-top: .5em;
+}
+#mainCart-Right-Promo > h4{
+	/*border-bottom: 1px solid white;*/
+	cursor: pointer;
+}
+#promoForm{
+	clear: both;
+	display: none;
+	margin-left: 1em;
+}
+/*#promoForm input[type=text]{
+	border: none;
+	padding: 8px 8px;
+	font-size: 12px;
+	border-radius: 3px;
+}
+#promoForm input[type=submit]{
+	background-color: #4CAF50;
+	color: white;
+	padding: 9px;
+	margin: 10px 0;
+	font-size: 12px;
+	border: none;
+	border-radius: 3px;
+}*/
+.infoLeft{
+	clear: left;
+	float: left;
+	margin: 1em;
+}
+.Price{
+	clear: right;
+	float: right;
+	margin: 1em;
+}
+#mainCart-Right-Total{
+	border-top: 1px solid white;
+	letter-spacing: .5px;
+}
+#mainCart-Right-Checkout{
+	clear: both;
+	background: linear-gradient(#4eb151, #5fb962);
+/*	background-color: #4CAF50;*/
+	height: 35px;
+	text-align: center;
+	line-height: 2.4;
+	margin-left: 1em;
+	margin-right: 1em;
+	border-radius: 3px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	cursor: pointer;
+}
+#mainCart-Right-Checkout:hover{
+	background: linear-gradient(#5fb962, #4eb151);
+}
+#promoDown{
+	color: #4CAF50;
+}
+/*End of subtotal box on the right styling*/
+
+/*Begin footer styling--------------*/
+footer{
+	background-color: #233239;
+	display: grid;
+	color: white;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	border-radius: 5px;
+}
+#footer-top{
+	padding: 10px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: linear-gradient( rgba(33, 37, 43, 0.6), rgba(33, 37, 43, 0.1) ), url("../images/laundromatBW.jpg");
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	letter-spacing: 1px;
+	border-radius: 5px 5px 0px 0px;
+}
+#footer-title > h3{
+	margin: 5px 0px;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+#footer-bottom{
+	display: block;
+	padding: 10px;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	letter-spacing: .3px;
+}
+#footer-bottom-copy{
+	float: left;
+	line-height: 2.0;
+}
+#footer-bottom-social{
+	float: right;
+}
+.socialImage{
+	padding: 0px 3px;
+}
+input[type=text], [type=email]{
+	border: none;
+	padding: 8px 8px;
+	/*width: 80%;*/
+	font-size: 12px;
+	border-radius: 3px;
+}
+input[type=submit]{
+	background-color: #4CAF50;
+	color: white;
+	padding: 9px;
+	margin: 10px 0;
+	font-size: 12px;
+	border: none;
+	border-radius: 3px;
+}
+
+/*End footer styling----------*/
+
+.svgIcon{
+	/*height: 50px;*/
+	min-width: 50px;
+	max-width: 100px;
+}
+
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main {
+    transition: margin-left .5s;
+    /*padding: 20px;*/
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/*-----------Hamburger Button Styling----------*/
+#hamburgerButton {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+    padding: 8px;
+    background-color: rgba(33, 37, 43, 0.7);
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 2.0);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/*Beginning of dialog box styles------------------*/
+#disabledBody{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(193,193,193, .5);
+	display: none;
+	z-index: 20;
+}
+
+#modal{
+	width: 40%;
+	height: auto;
+	background: white;
+	border: 1px solid #c1c1c1;
+	z-index: 100;
+	position: fixed;
+	left: 30%;
+	top: 20%;
+	box-shadow: 3px 3px 0 0 lightGray;
+	display: none;
+}
+
+#modalTitle, #modalContent, #modalButtons{
+	float: left;
+	width: 96%;
+}
+
+#modalTitle{	
+	float: left;
+	padding: 0 2%;
+	border-bottom: 1px solid #c1c1c1;
+	position: relative;
+}
+
+	#modalTitle #closeModal{
+		position: absolute;
+	    top: 10px;
+	    right: 15px;
+	    width: 42px;
+	    height: 42px;
+	    text-align: right;
+	    line-height: 35px;
+	    font-size: 42px;
+	    color: #c1c1c1;
+	    cursor: pointer;
+	}
+
+#modalContent{
+	float: center;
+	padding: 2%;
+	font-size: 30px;
+	text-align: center;
+}
+
+#checkIcon{
+	font-size: 4em;
+	color: green;
+}
+
+#modalContent p{
+	float: left;
+	width: 100%;
+	padding: 15px 0;
+	font-size: 16px;
+}
+
+#modalButtons{
+	float: left;
+	width: 96%;
+	height: auto;
+    border-top: 1px solid #c1c1c1;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+	#modalButtons button{
+	    width: 49%;
+    	padding: 15px 0 !important;
+    	box-shadow: none !important;
+    	font-size: 20px !important;
+    	cursor: pointer;
+	}
+
+	#modalButtons .btn-primary{
+		float: left;
+	}
+
+	#modalButtons .btn-default{
+		float: right;
+	}
+#payNow{
+	background: linear-gradient(#4eb151, #5fb962);
+	color: white;
+	text-align: center;
+	line-height: 2.0;
+	cursor: pointer;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+/*#payNow input[type=submit]{
+	font-weight: 500;
+	letter-spacing: 1px;
+
+}*/
+#payNow:hover{
+	background: linear-gradient(#5fb962, #4eb151);
+}
+@media (min-width: 716px){
+	#mainCart{
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: 1fr .5fr;
+	}
+}
+@media (max-width: 715px){
+	#mainCart{
+	display: flex;
+	flex-direction: column-reverse;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

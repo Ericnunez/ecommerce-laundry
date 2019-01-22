@@ -1,0 +1,393 @@
+/*Group 1
+Eric Nunez
+Mustafa Khan
+Abdullah Abu Isha*/
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: helvetica, sans-serif;
+}
+#page-Container{
+	display: grid;
+	margin-left: auto;
+	margin-right: auto;
+	grid-row-gap: .5em;
+	margin: 15px 15px;
+}
+header{
+	background-image: url("../images/dryingLine.jpg");
+	background-position: center;
+	background-size: cover;
+	max-width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	margin-bottom: 10px;
+}
+#header-title{
+	padding: 0px 5px;
+}
+#header-title > h1{
+	margin: 0px;
+	font-size: 4.5vw;
+	color: white;
+	letter-spacing: 1px;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+#header-description > p{
+	padding: 5px 5px;
+	margin: 5px;
+	color: white;
+	font-size: 2vw;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+.headlogo{
+	padding: 20px;
+	float: right;
+	max-width: 20%;
+    height: auto;
+}
+#header-title{
+	text-align: center;
+}
+#header-description{
+	text-align: center;
+}
+#secondRow{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 1em;
+}
+#secondRow-first, #secondRow-second{
+	padding: 1.5em 1.5em;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	background-color:  #FBFCFC;
+	border-radius: 5px;
+}
+#secondRow-second{
+	background-color: #233239;
+	color: #FBFCFC;
+	border-radius: 5px;
+}
+#secondRow-third{
+	padding: 1.5em 2em;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	background-color:  rgb(216,238,255);
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#broken{
+	border-radius: 100px;
+	opacity: 0.7;
+	display: inline-block;
+	width:100%;
+}
+
+#aboutimg{
+	padding:0;
+	margin:0;
+	display: inline-block;
+	background: url("../broken.jpg");
+	background-size: 100%;
+	height:300px;
+}
+
+#text{
+	color:white;
+	margin:0;
+	padding:0;
+	margin-bottom: 5%;
+	margin-left: 2%;
+	width:25%;
+	height:80%;
+	background-size: 10%;
+	font-size: 180%;
+}
+#secondRow-second img{
+	width: 60%;
+	float:right;
+	margin-left: 10px;
+}
+#secondRow-first{
+	text-align: left;
+	background: rgba(104, 104, 104, 0.2);
+}
+#secondRow-first h2{
+	color: gray;
+}
+#name{
+	width: 39.2%;
+	height:23px;
+	font-size: 15px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+#email{
+	width: 40%;
+	height:35px;
+	font-size: 15px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+#message{
+	width: 40%;
+	height:65px;
+	font-size: 15px;
+	margin-bottom: 10px;
+	border-radius:5px;
+	padding-left: 10px;
+}
+#submit{
+	width:25%;
+	background: rgb(255,63,92);
+	padding: 15px;
+	outline: none;
+	border: none;
+	margin-left: 8%;
+}
+#submit:hover {
+	cursor: pointer;
+	background: darkred;
+	color:white;
+}
+#row{
+	display: inline-block;
+	width: 70%;
+}
+#sec{
+	display: inline-block;
+	width:30%;
+	align-self: flex-start;
+	float: right;
+}
+span{
+	color:blue;
+	text-decoration: underline;
+}
+a{
+	font-weight: bold;
+}
+#row h1,h4,h3{
+	font-weight: normal;
+	color:rgb(1,3,58)
+}
+.no-outline:focus {
+	outline: none;
+}
+
+.no-outline {
+	border: none;
+}
+span:hover{
+	cursor: pointer;
+}
+#row h1{
+	margin-left: 1%;
+}
+#secondRow-second li{
+	padding: 7px;
+}
+
+
+
+
+
+input[type=text]{
+	border: none;
+	padding: 8px 8px;
+	/*width: 80%;*/
+	font-size: 12px;
+	border-radius: 3px;
+}
+input[type=submit]{
+	background-color: #4CAF50;
+	color: white;
+	padding: 9px;
+	margin: 10px 0;
+	font-size: 12px;
+	border: none;
+	border-radius: 3px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-weight: lighter;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/*-----------Hamburger Button Styling----------*/
+#hamburgerButton {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+    padding: 8px;
+    background-color: rgba(33, 37, 43, 0.7);
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 2.0);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+@media (max-width: 715px){
+	#secondPicture-transparent{
+		width: 80%;
+		padding: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (min-width: 716px){
+	#secondPicture-transparent{
+		float: right;
+		padding: 30px;
+		width: 45%;
+		height: 100%;
+	}
+}
+
+footer{
+	background-color: #233239;
+	display: grid;
+	color: white;
+	box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+	border-radius: 5px;
+}
+#footer-top{
+	padding: 10px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: linear-gradient( rgba(33, 37, 43, 0.6), rgba(33, 37, 43, 0.1) ), url("../images/laundromatBW.jpg");
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	letter-spacing: 1px;
+	border-radius: 5px 5px 0px 0px;
+}
+#footer-title > h3{
+	margin: 5px 0px;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	color: white;
+}
+#footer-bottom{
+	display: block;
+	padding: 10px;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	letter-spacing: .3px;
+}
+#footer-bottom-copy{
+	float: left;
+	line-height: 2.0;
+}
+#footer-bottom-social{
+	float: right;
+}
+#secondRow-second h1{
+	text-align: center;
+}
+#secondRow-first h1{
+	text-align: center;
+	color:gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
